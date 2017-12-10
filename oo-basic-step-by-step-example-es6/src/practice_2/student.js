@@ -5,8 +5,7 @@ class Student extends Person{
         this.className=className;
     }
     introduce(){
-      return `I am a Student. I am at Class ${this.className}.`;  
+      return `I am a Student. I am at Class ${this.className}.`;
     }
 }
-exports["default"]=Student;
-module.exports = exports["default"];
+module.exports =Student

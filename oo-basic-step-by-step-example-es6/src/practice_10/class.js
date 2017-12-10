@@ -7,7 +7,7 @@ class Class{
     }
     assignLeader(student){
         if(student.className.number===this.number){
-            this.leader = student;
+            this.leader = student.name;
         }
         else{
             return "It is not one of us.";
