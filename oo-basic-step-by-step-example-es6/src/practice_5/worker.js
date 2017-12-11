@@ -4,7 +4,8 @@ class Worker extends Person{
         super(name,age);
     }
     introduce(){
-        return `My name is ${super.name}. I am ${super.age} years old. I am a Teacher. I have a job.`;
+        var s=super.introduce();
+        return s+` I am a Teacher. I have a job.`;
     }
 }
 exports["default"] = Worker;

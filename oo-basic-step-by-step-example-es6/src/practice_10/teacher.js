@@ -5,15 +5,21 @@ class Teacher extends Person{
         this.className=className;
     }
     introduce(){
+        var s=super.introduce();
         if(typeof(this.className) === 'undefined'){
-            return `My name is ${super.name}. I am ${super.age} years old. I am a Teacher. I teach No Class.`;
+            return s+` I am a Teacher. I teach No Class.`;
         }
         else{
             var str="";
-            for(let item of this.className){
-                str+=` ${item.number},`;
+            for(let i in this.className){
+                if(this.className.indexOf(this.className[i])!=this.className.length-1) {
+                    str += ` ${this.className[i].number},`;
+                }
+                else{
+                    str += ` ${this.className[i].number}.`;
+                }
             }
-            return `My name is ${super.name}. I am ${super.age} years old. I am a Teacher. I teach Class`+str;
+            return s+` I am a Teacher. I teach Class`+str;
         }    
         }
     }

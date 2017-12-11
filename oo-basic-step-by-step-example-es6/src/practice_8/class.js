@@ -5,9 +5,9 @@ class Class{
     getDisplayName(){
         return `Class ${this.number}`;
     }
-    assignLeader(student){
-        if(student.className.number===this.number){
-            this.leader = student;
+    assignLeader(stu){
+        if(stu.className.number === this.number) {
+            this.leader = stu;
         }
     }
 }

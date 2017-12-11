@@ -1,4 +1,3 @@
-var str="";
 class Class{
     constructor(number){
         this.number=number;
@@ -9,18 +8,17 @@ class Class{
     assignLeader(student,teacher){
         if(student.className.number===this.number){
             this.leader = student;
-            str=`I am ${teacher.name} I know ${student.name} become Leader of Class ${this.number}.`;
+            if(typeof(teacher)!= 'undefined')
+                teacher.registerAssignLeaderListener(student);
         }
         else{
             console.log("It is not one of us.");
-            str=`I am ${teacher.name} I know ${student.name} has joined Class ${this.number}.`;
         }
     }
-    registerAssignLeaderListener(teacher){
-        console.log(str);
-    }
-    appendMemeber(stu){
-        stu.className=this;
+    appendMember(student,teacher){
+        student.className=this;
+        if(typeof(teacher)!== 'undefined')
+            teacher.registerJoinListener(student);
     }
 }
 exports["default"] = Class;

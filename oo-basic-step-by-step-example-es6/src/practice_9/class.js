@@ -10,11 +10,11 @@ class Class{
             this.leader = student;
         }
         else{
-            return "It is not one of us.";
+            console.log("It is not one of us.");
         }
     }
-    appendMemeber(stu){
-        stu.className=this;
+    appendMember(stu){
+        stu.className = this;
     }
 }
 exports["default"] = Class;

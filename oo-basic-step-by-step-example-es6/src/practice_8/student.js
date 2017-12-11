@@ -5,13 +5,13 @@ class Student extends Person{
         this.className=className;
     }
     introduce(){
-        if(typeOf(this.leader)==="undefined"){
-           return `My name is ${super.name}. I am ${super.age} years old. I am a Student. I am at ${this.className.number}.`;
+        var s=super.introduce();
+        if(typeof(this.className.leader)==="undefined"){
+           return s+` I am a Student. I am at Class ${this.className.number}.`;
        }
        else{
-           return `My name is ${super.name}. I am ${super.age} years old. I am a Student. I am Leader of ${this.className.number}.`; 
+           return s+` I am a Student. I am Leader of Class ${this.className.number}.`;
        }
     }
 }
-exports["default"] = Student;
-module.exports = exports["default"];
+module.exports = Student;

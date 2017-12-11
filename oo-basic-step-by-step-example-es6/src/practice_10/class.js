@@ -7,13 +7,13 @@ class Class{
     }
     assignLeader(student){
         if(student.className.number===this.number){
-            this.leader = student.name;
+            this.leader = student;
         }
         else{
-            return "It is not one of us.";
+            console.log("It is not one of us.");
         }
     }
-    appendMemeber(stu){
+    appendMember(stu){
         stu.className=this;
     }
 }
